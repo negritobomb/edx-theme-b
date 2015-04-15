@@ -3,14 +3,14 @@
 <%! from django.core.urlresolvers import reverse %>
 <%inherit file="main.html" />
 <%namespace name='static' file='static_content.html'/>
-<%block name="pagetitle">${_("Demand for Cloud DevOps is steep!")}</%block>
+<%block name="pagetitle">${_("B United Online")}</%block>
 <%! from microsite_configuration import microsite %>
 
 <%
   homepage_overlay_html = microsite.get_value('homepage_overlay_html')
 
   show_homepage_promo_video = microsite.get_value('show_homepage_promo_video', True)
-  homepage_promo_video_youtube_id = microsite.get_value('homepage_promo_video_youtube_id', "SCXWGBImpNA")
+  homepage_promo_video_youtube_id = microsite.get_value('homepage_promo_video_youtube_id', "nDvGXKDZsy8")
 
   show_partners = microsite.get_value('show_partners', True)
 
@@ -25,11 +25,11 @@
             ${homepage_overlay_html}
           % else:
             % if self.stanford_theme_enabled():
-              <h1>${_("Industry leading courses from <strong>{university_name}</strong>").format(university_name="Stanford")}</h1>
+              <h1>${_("El futúro de la educaci&oacuten <strong>{university_name}</strong>").format(university_name="Stanford")}</h1>
             % else:
-              <h1>${_("The Future of Cloud Training")}</h1>
+              <h1>${_("El futuro de la educaci&oacuten en linea")}</h1>
             % endif
-            <h2>${_("Realize your dream, anywhere, anytime.")}</h2>
+            <h2>${_("Estudia donde sea, a la hora que sea.")}</h2>
           % endif
         </hgroup>
 
@@ -40,14 +40,14 @@
 
             <div class="secondary-actions">
               <div class="social-sharing">
-                <div class="sharing-message">${_("Stay up to date with all {platform_name} has to offer!").format(platform_name=settings.PLATFORM_NAME)}</div>
-                <a href="https://twitter.com/beacloudgenius" class="share">
+                <div class="sharing-message">${_("Mantente al d&iacutea {platform_name} has to offer!").format(platform_name=settings.PLATFORM_NAME)}</div>
+                <a href="https://twitter.com/" class="share">
                   <img src="${static.url('images/social/twitter-sharing.png')}">
                 </a>
-                <a href="http://www.facebook.com/beacloudgenius" class="share">
+                <a href="http://www.facebook.com/" class="share">
                   <img src="${static.url('images/social/facebook-sharing.png')}">
                 </a>
-                <a href="https://plus.google.com/+NileshLondheHere/posts" class="share">
+                <a href="https://plus.google.com/" class="share">
                   <img src="${static.url('images/social/google-plus-sharing.png')}">
                 </a>
               </div>
@@ -66,9 +66,9 @@
   </header>
   <section class="container">
     <section class="highlighted-courses">
-      <h1>Our Industry Leading Cloud Courses Starting Soon.</h1>
+      <h1>Con&oacutecenos.</h1>
       <br/>
-      <h2 style="text-align: center;">Sign up for a course.</h2>
+      <h2 style="text-align: center;">Registrate a nuestros cursos.</h2>
       <br/>
       % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
         <section class="courses">
@@ -91,7 +91,7 @@
     <%
       youtube_video_id = homepage_promo_video_youtube_id
       if self.stanford_theme_enabled():
-        youtube_video_id = "2gmreZObCY4"
+        youtube_video_id = "nDvGXKDZsy8"
     %>
     <iframe width="640" height="360" src="//www.youtube.com/embed/${youtube_video_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
@@ -112,7 +112,7 @@
      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-     ga('create', 'UA-58410322-1', 'auto');
+     ga('create', 'UA-61913928-1', 'auto');
      ga('send', 'pageview');
 
    </script>
